@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSL Color Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>HSL Color Library</h1>
+        <p>Explore the 360° Color Wheel</p>
+        <span>36 Colors • 108 Shades</span>
+    </header>
+
+    <section class="studio">
+
+        <h2>Color Playground</h2>
+        <p>Customize your own colors</p>
+
+        <div class="color-preview" id="colorPreview">
+            Preview Color
+        </div>
+
+        <div class="controls">
+
+            <div class="control">
+                <label for="hue">Hue: <span id="hueValue">0</span>°</label>
+                <input type="range" id="hue" min="0" max="359" value="0">
+            </div>
+
+            <div class="control">
+                <label for="saturation">Saturation: <span id="saturationValue">80</span>%</label>
+                <input type="range" id="saturation" min="0" max="100" value="80">
+            </div>
+
+            <div class="control">
+                <label for="lightness">Lightness: <span id="lightnessValue">50</span>%</label>
+                <input type="range" id="lightness" min="0" max="100" value="50">
+            </div>
+
+            <div class="control">
+                <label for="colorPicker">Choose a color:</label>
+                <input type="color" id="colorPicker" value="#e61919">
+            </div>
+
+        </div>
+
+        <div class="color-output">
+            <p id="hslOutput">hsl(0, 80%, 50%)</p>
+            <button id="copyColor">Copy HSL</button>
+            <button id="saveColor">Save Color</button>
+        </div>
+
+        <div class="saved-section">
+            <h3>My Favorite Colors</h3>
+            <div id="savedColors" class="saved-colors">
+                <p>No saved colors yet.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <section class="color-section" style="--hue: var(--red)">
+            <h2>Red — 0°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--red-orange)">
+            <h2>Red Orange — 10°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--orange-red)">
+            <h2>Orange Red — 20°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--orange)">
+            <h2>Orange — 30°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--orange-yellow)">
+            <h2>Orange Yellow — 40°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--yellow-orange)">
+            <h2>Yellow Orange — 50°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--yellow)">
+            <h2>Yellow — 60°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--yellow-lime)">
+            <h2>Yellow Lime — 70°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--lime-yellow)">
+            <h2>Lime Yellow — 80°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--lime)">
+            <h2>Lime — 90°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--lime-green)">
+            <h2>Lime Green — 100°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--yellow-green)">
+            <h2>Yellow Green — 110°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--green)">
+            <h2>Green — 120°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--green-spring)">
+            <h2>Green Spring — 130°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--spring-green)">
+            <h2>Spring Green — 140°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--spring)">
+            <h2>Spring — 150°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--spring-cyan)">
+            <h2>Spring Cyan — 160°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--cyan-spring)">
+            <h2>Cyan Spring — 170°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--cyan)">
+            <h2>Cyan — 180°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--cyan-blue)">
+            <h2>Cyan Blue — 190°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--blue-cyan)">
+            <h2>Blue Cyan — 200°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--azure)">
+            <h2>Azure — 210°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--blue-azure)">
+            <h2>Blue Azure — 220°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--blue)">
+            <h2>Blue — 230°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--blue-indigo)">
+            <h2>Blue Indigo — 240°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--indigo-blue)">
+            <h2>Indigo Blue — 250°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--indigo)">
+            <h2>Indigo — 260°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--indigo-purple)">
+            <h2>Indigo Purple — 270°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--purple-indigo)">
+            <h2>Purple Indigo — 280°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--purple)">
+            <h2>Purple — 290°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--purple-magenta)">
+            <h2>Purple Magenta — 300°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--magenta-purple)">
+            <h2>Magenta Purple — 310°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--magenta)">
+            <h2>Magenta — 320°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--magenta-pink)">
+            <h2>Magenta Pink — 330°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--pink-magenta)">
+            <h2>Pink Magenta — 340°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+        <section class="color-section" style="--hue: var(--pink-red)">
+            <h2>Pink Red — 350°</h2>
+            <div class="cards">
+                <div class="card light">Light</div>
+                <div class="card medium">Medium</div>
+                <div class="card dark">Dark</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>HSL Color Library | Built with HTML & CSS</p>
+        <p>360° Color Experience</p>
+    </footer>
+
+</body>
+
+</html>
